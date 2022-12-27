@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JS</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+    <div class="container-form">
+        <div>
+            <button type="button" class="btn btn-secondary">Показати форму</button>
+        </div>
+
+        <div>
+            <form class="bd-example" id="form" role="form" action="" autocomplete="off" method="POST">
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">ПІБ покупця</label>
+                    <label class="text-danger">&nbsp;*</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="ПІБ" minlength="3" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="city" class="form-label">Місто</label>
+                    <label class="text-danger">&nbsp;*</label>
+                    <select class="form-select" id="city" name="city" required>
+                        <option value="Одеса" selected>Одеса</option>
+                        <option value="Київ">Київ</option>
+                        <option value="Львів">Львів</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="department" class="form-label">Склад Нової пошти для надсилання</label>
+                    <label class="text-danger">&nbsp;*</label>
+                    <input type="number" class="form-control" id="department" name="department" required>
+                </div>
+
+                <div class="mb-3 form-check d-flex justify-content-around">
+                    <div>
+                        <input type="radio" class="form-check-input" id="codPay" name="pay" value="Післяплата" required>
+                        <label class="form-check-label" for="codPay">Післяплата</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" id="bankPay" name="pay" value="Оплата банківською карткою">
+                        <label class="form-check-label" for="bankPay">Оплата банківською карткою</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Кількість продукції</label>
+                    <label class="text-danger">&nbsp;*</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Коментар до замовлення</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Відправити</button>
+            </form>
+
+            <div class="mt-3" id="result"></div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    </body>
+</html>
