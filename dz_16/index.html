@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Прогноз погоди</title>
+</head>
+<body>
+<div class="jumbotron">
+    <h2>Оберіть назву міста</h2>
+    <div class="selectCity">
+        <select class="select" name="cities" id="cities">
+            <option selected value="Odesa">Одеса</option>
+            <option value="Kyiv">Київ</option>
+            <option value="Kharkiv">Харків</option>
+            <option value="Lviv">Львів</option>
+            <option value="Tbilisi">Тбілісі</option>
+            <option value="Chisinau">Кишинів</option>
+            <option value="Berlin">Берлін</option>
+            <option value="Rio de Janeiro">Ріо-де-Жанейро</option>
+            <option value="Beijing">Пекін</option>
+            <option value="Melbourne">Мельбурн</option>
+            <option value="Managua">Манагуа</option>
+            <option value="Madrid">Мадрид</option>
+            <option value="Helsinki">Гельсінкі</option>
+            <option value="Warsaw">Варшава</option>
+            <option value="Ottawa">Оттава</option>
+            <option value="London">Лондон</option>
+            <option value="Rome">Рим</option>
+            <option value="Mexico city">Мехіко</option>
+            <option value="Delhi">Делі</option>
+            <option value="Tokio">Tokio</option>
+        </select>
+        <button id="city">OK</button>
+    </div>
+</div>
+<div id="rowWeather" style="display: none">
+    <div class="row">
+        <div id="weather" class="rowEnter">
+            <img src="" id="weatherImg" class="center-block">
+            <h3 id="weather-text"></h3>
+        </div>
+
+        <div id="temp" class="rowEnter">
+            <h3  style="font-size:18px">Температура</h3>
+            <h3><span id="temp-text"></span> <span id="tempMode">C&deg</span></h3>
+        </div>
+
+        <div class="rowEnter" id="pressure">
+            <p style="font-size:18px">Атмосферний тиск</p>
+            <p id="wind-text3" style="font-size:16px"></p>
+        </div>
+
+        <div class="rowEnter" id="humidity">
+            <p style="font-size:18px">Відносна вологість</p>
+            <p id="wind-text4" style="font-size:16px"></p>
+        </div>
+
+        <div id="wind" class="rowEnter">
+            <p style="font-size:18px">Швидкість вітру</p>
+            <p id="wind-text" style="font-size:16px"></p>
+            <br>або<br>
+            <p id="wind-text2" style="font-size:16px"></p>
+        </div>
+
+        <div class="rowEnter" id="deg">
+            <p style="font-size:18px">Напрям у градусах</p>
+            <p id="deg-text" style="font-size:16px"></p>
+        </div>
+
+
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

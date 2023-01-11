@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>ID</title>
+</head>
+<body>
+
+<div class="enter">
+    <div id="err" style="color: red; font-size: 15px"></div>
+    <label for="id" style="font-weight: bold;">Ввести ID (1-100):</label>
+    <input style="margin-top: 10px" type="number" id="id" name="id" pattern="[1-100]" required>
+    <button onclick="sendID()">Відправити</button>
+
+    <div class="responcePost">
+        <p id="post"></p>
+    </div>
+    <div id="responceComment" class="comment"></div>
+    <button id="comment" onclick="comment()" style="display: none">Comments</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
